@@ -1,0 +1,2 @@
+capacity,passengersNumber
+300, 300
