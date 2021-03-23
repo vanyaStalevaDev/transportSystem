@@ -1,2 +1,2 @@
-loadCapacity, loadWeight
-100,90
+loadCapacity, loadWeight,plateNumber,engineType
+100,90,77AC,GASOLINE

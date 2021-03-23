@@ -25,11 +25,18 @@ public class PassengerTrain extends Train {
         passengerNumber = passengerNum;
     }
 
+    public PassengerTrain(String plateNumber, int capacity, int passengerNumber, TrainEngineType engineType){
+        this.capacity = capacity;
+        this.plateNumber = plateNumber;
+        this.passengerNumber = passengerNumber;
+        this.engineType = engineType;
+    }
+
     public int getCapacity() {
         return capacity;
     }
 
-    public int getPassengerNumber() {
+    public int getPassengersNumber() {
         return passengerNumber;
     }
 

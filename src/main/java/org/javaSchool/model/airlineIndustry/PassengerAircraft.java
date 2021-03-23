@@ -17,6 +17,13 @@ public class PassengerAircraft extends Aircraft {
         this.capacity = capacity;
     }
 
+    public PassengerAircraft(int capacity, String plateNumber, AircraftEngineType engineType, int passengersNumber) {
+        this.capacity = capacity;
+        this.passengersNumber = passengersNumber;
+        this.engineType = engineType;
+        this.plateNumber = plateNumber;
+    }
+
     public int getCapacity() {
         return capacity;
     }

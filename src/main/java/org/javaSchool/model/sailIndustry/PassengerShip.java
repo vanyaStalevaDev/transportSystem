@@ -18,9 +18,11 @@ public class PassengerShip extends Ship {
         this.capacity = capacity;
     }
 
-    public PassengerShip(int capacity, int passengerNum) {
+    public PassengerShip(int capacity, int passengerNum, String plateNumber, ShipEngineType engineType) {
         this.capacity = capacity;
         this.passengersNumber = passengerNum;
+        this.plateNumber = plateNumber;
+        this.engineType = engineType;
     }
 
     public int getCapacity() {

@@ -13,10 +13,14 @@ import java.util.List;
 
 public class Demo {
     public static void main(String[] args) {
-        Demo demo = new Demo();
+//        Demo demo = new Demo();
 //        demo.demoShips();
 //        demo.demoAirCrafts();
-        demo.demoTrains();
+//        demo.demoTrains();
+        ParkingDemo demo = new ParkingDemo();
+        demo.demoAircraftParking();
+        demo.demoShipParking();
+        demo.demoTrainParking();
     }
 
     public void demoTrains() {

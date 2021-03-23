@@ -1,2 +1,2 @@
-loadCapacity, loadWeight
-200, 200
+loadCapacity, loadWeight,plateNumber,engineType
+200, 200,1010A,KEROSENE

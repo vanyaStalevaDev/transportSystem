@@ -10,12 +10,19 @@ public class CargoShip extends Ship implements Loadable {
     @CsvBindByName
     private final int loadCapacity;
 
-    public CargoShip(){
+    public CargoShip() {
         this(DEFAULT_LOAD_CAPACITY);
     }
 
-    public CargoShip(int capacity){
+    public CargoShip(int capacity) {
         this.loadCapacity = capacity;
+    }
+
+    public CargoShip(int capacity, String plateNumber, ShipEngineType engineType, int loadWeight) {
+        this.loadCapacity = capacity;
+        this.plateNumber = plateNumber;
+        this.engineType = engineType;
+        this.loadWeight = loadWeight;
     }
 
     public int getLoadWeight() {

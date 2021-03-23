@@ -1,3 +1,3 @@
-capacity,passengerNumber
-200,35
-300,290
+capacity,passengerNumber,plateNumber,engineType
+200,35,AC4560A,DIESEL
+300,290,AC4061B,GASOLINE

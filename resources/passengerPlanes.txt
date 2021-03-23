@@ -1,2 +1,2 @@
-capacity,passengersNumber
-300, 300
+capacity,passengersNumber,plateNumber,engineType
+300, 300, 10AA,GASOLINE

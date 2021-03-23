@@ -18,6 +18,13 @@ public class CargoTrain extends Train implements Loadable {
         this.loadCapacity = capacity;
     }
 
+    public CargoTrain(String plateNumber, int capacity, int loadWeight, TrainEngineType engineType){
+        this.loadCapacity = capacity;
+        this.plateNumber = plateNumber;
+        this.loadWeight = loadWeight;
+        this.engineType = engineType;
+    }
+
     public int getLoadCapacity() {
         return loadCapacity;
     }

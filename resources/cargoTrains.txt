@@ -1,2 +1,2 @@
-loadCapacity,loadWeight
-1000,200
+loadCapacity,loadWeight,plateNumber,engineType
+1000,200,AB1020A,DIESELS
