@@ -17,10 +17,10 @@ public class Demo {
 //        demo.demoShips();
 //        demo.demoAirCrafts();
 //        demo.demoTrains();
-        ParkingDemo demo = new ParkingDemo();
-        demo.demoAircraftParking();
-        demo.demoShipParking();
-        demo.demoTrainParking();
+        ParkingDemo parkingDemo = new ParkingDemo();
+        parkingDemo.demoAircraftParking();
+        parkingDemo.demoShipParking();
+        parkingDemo.demoTrainParking();
     }
 
     public void demoTrains() {
