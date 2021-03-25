@@ -6,9 +6,7 @@ import org.javaSchool.model.airlineIndustry.Aircraft;
 import org.javaSchool.model.sailIndustry.Ship;
 import org.javaSchool.model.trainIndustry.Train;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class Parking {
