@@ -37,9 +37,9 @@ public class SortingDemo {
     public void sortTrains() {
         Parser parser = new Parser();
         List<PassengerTrain> passengerTrains = parser.parseVehicle(PassengerTrain.class, Constants.PASSENGER_TRAINS_PATH);
-        System.out.println("Printe before sort!");
+        System.out.println("Print before sort!");
         passengerTrains.stream().forEach(System.out::println);
-//        Collections.sort(passengerTrains, new TrainPassengersNumComparator());
+        Collections.sort(passengerTrains, new TrainPassengersNumComparator());
         System.out.println("Print after sort!");
         passengerTrains.stream().sorted(new TrainPassengersNumComparator()).forEach(System.out::println);
     }
