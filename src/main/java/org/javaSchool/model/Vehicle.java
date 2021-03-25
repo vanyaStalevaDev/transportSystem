@@ -9,4 +9,5 @@ public interface Vehicle {
     public String getPlateNumber();
     public void setParkingReceipt(ParkingReceipt receipt);
     public ParkingReceipt getParkingReceipt();
+    public VehicleType getVehicleType();
 }

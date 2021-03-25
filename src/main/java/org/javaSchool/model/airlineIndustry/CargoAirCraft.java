@@ -2,6 +2,7 @@ package org.javaSchool.model.airlineIndustry;
 
 import com.opencsv.bean.CsvBindByName;
 import org.javaSchool.model.Loadable;
+import org.javaSchool.model.VehicleType;
 
 public class CargoAirCraft extends Aircraft implements Loadable{
     private static final int DEFAULT_LOAD_CAPACITY = 300;
@@ -18,11 +19,12 @@ public class CargoAirCraft extends Aircraft implements Loadable{
         this.loadCapacity = capacity;
     }
 
-    public CargoAirCraft(int capacity, String plateNumber, AircraftEngineType engineType, int loadWeight) {
+    public CargoAirCraft(int capacity, String plateNumber, AircraftEngineType engineType, int loadWeight, VehicleType vehicleType) {
         this.loadCapacity = capacity;
         this.loadWeight = loadWeight;
         this.engineType = engineType;
         this.plateNumber = plateNumber;
+        this.vehicleType = vehicleType;
     }
 
     public int getLoadWeight() {
@@ -58,7 +60,7 @@ public class CargoAirCraft extends Aircraft implements Loadable{
     }
 
     public void unload() {
-        loadWeight = 0;
+        unload(loadWeight);
     }
 
     @Override

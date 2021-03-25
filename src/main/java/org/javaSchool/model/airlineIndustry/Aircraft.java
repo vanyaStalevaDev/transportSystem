@@ -3,6 +3,7 @@ package org.javaSchool.model.airlineIndustry;
 import com.opencsv.bean.CsvBindByName;
 import org.javaSchool.model.Route;
 import org.javaSchool.model.Vehicle;
+import org.javaSchool.model.VehicleType;
 import org.javaSchool.model.parking.ParkingReceipt;
 
 import java.util.Objects;
@@ -12,10 +13,18 @@ public abstract class Aircraft implements Vehicle {
     @CsvBindByName
     protected String plateNumber;
 
+
     @CsvBindByName
     protected AircraftEngineType engineType;
+    @CsvBindByName
+    VehicleType vehicleType;
 
     protected ParkingReceipt parkingReceipt;
+
+    @Override
+    public VehicleType getVehicleType() {
+        return vehicleType;
+    }
 
     @Override
     public void setParkingReceipt(ParkingReceipt parkingReceipt) {

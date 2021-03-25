@@ -1,6 +1,7 @@
 package org.javaSchool.model.trainIndustry;
 
 import com.opencsv.bean.CsvBindByName;
+import org.javaSchool.model.VehicleType;
 
 public class PassengerTrain extends Train {
     @CsvBindByName
@@ -25,11 +26,12 @@ public class PassengerTrain extends Train {
         passengerNumber = passengerNum;
     }
 
-    public PassengerTrain(String plateNumber, int capacity, int passengerNumber, TrainEngineType engineType){
+    public PassengerTrain(String plateNumber, int capacity, int passengerNumber, TrainEngineType engineType, VehicleType vehicleType) {
         this.capacity = capacity;
         this.plateNumber = plateNumber;
         this.passengerNumber = passengerNumber;
         this.engineType = engineType;
+        this.vehicleType = vehicleType;
     }
 
     public int getCapacity() {
@@ -68,4 +70,14 @@ public class PassengerTrain extends Train {
         debarkPassengers();
     }
 
+    @Override
+    public String toString() {
+        return "PassengerTrain{" +
+                "capacity=" + capacity +
+                ", passengerNumber=" + passengerNumber +
+                ", plateNumber='" + plateNumber + '\'' +
+                ", engineType=" + engineType +
+                ", vehicleType=" + vehicleType +
+                '}';
+    }
 }

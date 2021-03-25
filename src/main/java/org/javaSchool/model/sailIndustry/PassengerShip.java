@@ -1,6 +1,7 @@
 package org.javaSchool.model.sailIndustry;
 
 import com.opencsv.bean.CsvBindByName;
+import org.javaSchool.model.VehicleType;
 
 public class PassengerShip extends Ship {
     private static final int DEFAULT_CAPACITY = 1200;
@@ -18,11 +19,12 @@ public class PassengerShip extends Ship {
         this.capacity = capacity;
     }
 
-    public PassengerShip(int capacity, int passengerNum, String plateNumber, ShipEngineType engineType) {
+    public PassengerShip(int capacity, int passengerNum, String plateNumber, ShipEngineType engineType, VehicleType vehicleType) {
         this.capacity = capacity;
         this.passengersNumber = passengerNum;
         this.plateNumber = plateNumber;
         this.engineType = engineType;
+        this.vehicleType = vehicleType;
     }
 
     public int getCapacity() {

@@ -2,6 +2,7 @@ package org.javaSchool.model.trainIndustry;
 
 import com.opencsv.bean.CsvBindByName;
 import org.javaSchool.model.Loadable;
+import org.javaSchool.model.VehicleType;
 
 public class CargoTrain extends Train implements Loadable {
     private static final int DEFAULT_LOAD_CAPACITY = 100;
@@ -10,19 +11,20 @@ public class CargoTrain extends Train implements Loadable {
     @CsvBindByName
     private int loadWeight;
 
-    public CargoTrain(){
+    public CargoTrain() {
         this(DEFAULT_LOAD_CAPACITY);
     }
 
-    public CargoTrain(int capacity){
+    public CargoTrain(int capacity) {
         this.loadCapacity = capacity;
     }
 
-    public CargoTrain(String plateNumber, int capacity, int loadWeight, TrainEngineType engineType){
+    public CargoTrain(String plateNumber, int capacity, int loadWeight, TrainEngineType engineType, VehicleType vehicleType) {
         this.loadCapacity = capacity;
         this.plateNumber = plateNumber;
         this.loadWeight = loadWeight;
         this.engineType = engineType;
+        this.vehicleType = vehicleType;
     }
 
     public int getLoadCapacity() {
@@ -58,7 +60,7 @@ public class CargoTrain extends Train implements Loadable {
     }
 
     public void unload() {
-        loadWeight = 0;
+        unload(this.loadWeight);
     }
 
     @Override

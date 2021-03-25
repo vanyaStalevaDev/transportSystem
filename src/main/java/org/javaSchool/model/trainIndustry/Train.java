@@ -3,18 +3,26 @@ package org.javaSchool.model.trainIndustry;
 import com.opencsv.bean.CsvBindByName;
 import org.javaSchool.model.Route;
 import org.javaSchool.model.Vehicle;
+import org.javaSchool.model.VehicleType;
 import org.javaSchool.model.parking.ParkingReceipt;
 
 import java.util.Objects;
 
-public abstract class Train implements Vehicle {
+public abstract class Train implements Vehicle, Comparable<Train> {
     protected Route travelRoute;
     @CsvBindByName
     protected String plateNumber;
     @CsvBindByName
     protected TrainEngineType engineType;
+    @CsvBindByName
+    protected VehicleType vehicleType;
 
     protected ParkingReceipt parkingReceipt;
+
+    @Override
+    public VehicleType getVehicleType() {
+        return vehicleType;
+    }
 
     @Override
     public void travel() {
@@ -55,4 +63,13 @@ public abstract class Train implements Vehicle {
     public int hashCode() {
         return Objects.hash(plateNumber, engineType);
     }
+
+    @Override
+    public int compareTo(Train o) {
+        return this.plateNumber.compareTo(o.plateNumber) + this.engineType.compareTo(o.engineType);
+    }
+//    @Override
+//    public String toString(){
+//        return
+//    }
 }

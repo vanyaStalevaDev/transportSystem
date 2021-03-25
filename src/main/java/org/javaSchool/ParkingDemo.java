@@ -5,12 +5,14 @@ import org.javaSchool.model.parking.ParkingReceipt;
 import org.javaSchool.model.sailIndustry.PassengerShip;
 import org.javaSchool.model.trainIndustry.PassengerTrain;
 import org.javaSchool.service.parkingService.ParkingService;
+import org.javaSchool.util.Constants;
 import org.javaSchool.util.Parser;
 
 public class ParkingDemo {
 
     public void demoTrainParking() {
-        PassengerTrain passengerTrain = Parser.parsePassengerTrains().get(1);
+        Parser<PassengerTrain> parser = new Parser<>();
+        PassengerTrain passengerTrain = parser.parseVehicle(PassengerTrain.class, Constants.PASSENGER_TRAINS_PATH).get(1);
         ParkingService parkingService = new ParkingService();
         ParkingReceipt receipt = parkingService.parkVehicle(passengerTrain);
         passengerTrain.setParkingReceipt(receipt);
@@ -18,16 +20,17 @@ public class ParkingDemo {
     }
 
     public void demoShipParking() {
-        PassengerShip passengerShip = Parser.parsePassengerShips().get(0);
+        Parser<PassengerShip> parser = new Parser<>();
+        PassengerShip passengerShip = parser.parseVehicle(PassengerShip.class, Constants.PASSENGER_SHIPS_PATH).get(0);
         ParkingService parkingService = new ParkingService();
         ParkingReceipt receipt = parkingService.parkVehicle(passengerShip);
         passengerShip.setParkingReceipt(receipt);
-
         parkingService.unparkVehicle(passengerShip, 3);
     }
 
     public void demoAircraftParking() {
-        CargoAirCraft cargoAirCraft = Parser.parseCargoAirCrafts().get(0);
+        Parser<CargoAirCraft> parser = new Parser<>();
+        CargoAirCraft cargoAirCraft = parser.parseVehicle(CargoAirCraft.class, Constants.CARGO_PLANES_PATH).get(0);
         ParkingService parkingService = new ParkingService();
         ParkingReceipt receipt = parkingService.parkVehicle(cargoAirCraft);
         cargoAirCraft.setParkingReceipt(receipt);

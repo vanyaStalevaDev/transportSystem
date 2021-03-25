@@ -3,6 +3,7 @@ package org.javaSchool.model.sailIndustry;
 import com.opencsv.bean.CsvBindByName;
 import org.javaSchool.model.Route;
 import org.javaSchool.model.Vehicle;
+import org.javaSchool.model.VehicleType;
 import org.javaSchool.model.parking.ParkingReceipt;
 
 import java.util.Objects;
@@ -14,9 +15,16 @@ public abstract class Ship implements Vehicle {
     @CsvBindByName
     protected ShipEngineType engineType;
     protected ParkingReceipt parkingReceipt;
+    @CsvBindByName
+    protected VehicleType vehicleType;
 
     public void travel() {
         System.out.printf("Sailing from %s to %s.%n", travelRoute.getStartPoint(), travelRoute.getEndPoint());
+    }
+
+    @Override
+    public VehicleType getVehicleType() {
+        return vehicleType;
     }
 
     public void setRoute(Route route) {

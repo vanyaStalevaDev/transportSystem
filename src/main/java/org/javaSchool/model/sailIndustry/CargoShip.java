@@ -2,6 +2,7 @@ package org.javaSchool.model.sailIndustry;
 
 import com.opencsv.bean.CsvBindByName;
 import org.javaSchool.model.Loadable;
+import org.javaSchool.model.VehicleType;
 
 public class CargoShip extends Ship implements Loadable {
     private static final int DEFAULT_LOAD_CAPACITY = 100;
@@ -18,11 +19,12 @@ public class CargoShip extends Ship implements Loadable {
         this.loadCapacity = capacity;
     }
 
-    public CargoShip(int capacity, String plateNumber, ShipEngineType engineType, int loadWeight) {
+    public CargoShip(int capacity, String plateNumber, ShipEngineType engineType, int loadWeight, VehicleType vehicleType) {
         this.loadCapacity = capacity;
         this.plateNumber = plateNumber;
         this.engineType = engineType;
         this.loadWeight = loadWeight;
+        this.vehicleType = vehicleType;
     }
 
     public int getLoadWeight() {
@@ -58,7 +60,7 @@ public class CargoShip extends Ship implements Loadable {
     }
 
     public void unload() {
-        loadWeight = 0;
+        unload(loadWeight);
     }
 
     @Override
