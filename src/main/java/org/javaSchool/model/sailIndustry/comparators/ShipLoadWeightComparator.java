@@ -1,6 +1,5 @@
 package org.javaSchool.model.sailIndustry.comparators;
 
-import org.javaSchool.model.airlineIndustry.CargoAirCraft;
 import org.javaSchool.model.sailIndustry.CargoShip;
 
 import java.util.Comparator;

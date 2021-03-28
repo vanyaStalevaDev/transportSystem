@@ -4,22 +4,22 @@ import com.opencsv.bean.CsvBindByName;
 import org.javaSchool.model.Loadable;
 import org.javaSchool.model.VehicleType;
 
-public class CargoAirCraft extends Aircraft implements Loadable{
+public class CargoAircraft extends Aircraft implements Loadable{
     private static final int DEFAULT_LOAD_CAPACITY = 300;
     @CsvBindByName
     private int loadWeight;
     @CsvBindByName
     private final int loadCapacity;
 
-    public CargoAirCraft() {
+    public CargoAircraft() {
         this(DEFAULT_LOAD_CAPACITY);
     }
 
-    public CargoAirCraft(int capacity) {
+    public CargoAircraft(int capacity) {
         this.loadCapacity = capacity;
     }
 
-    public CargoAirCraft(int capacity, String plateNumber, AircraftEngineType engineType, int loadWeight, VehicleType vehicleType) {
+    public CargoAircraft(int capacity, String plateNumber, AircraftEngineType engineType, int loadWeight, VehicleType vehicleType) {
         this.loadCapacity = capacity;
         this.loadWeight = loadWeight;
         this.engineType = engineType;

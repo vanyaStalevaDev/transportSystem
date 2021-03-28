@@ -1,6 +1,6 @@
 package org.javaSchool;
 
-import org.javaSchool.model.airlineIndustry.CargoAirCraft;
+import org.javaSchool.model.airlineIndustry.CargoAircraft;
 import org.javaSchool.model.sailIndustry.PassengerShip;
 import org.javaSchool.model.trainIndustry.PassengerTrain;
 import org.javaSchool.service.parkingService.ParkingService;
@@ -26,8 +26,8 @@ public class ParkingDemo {
     }
 
     public void demoAircraftParking() {
-        Parser<CargoAirCraft> parser = new Parser<>();
-        CargoAirCraft cargoAirCraft = parser.parseVehicle(CargoAirCraft.class, Constants.CARGO_PLANES_PATH).get(0);
+        Parser<CargoAircraft> parser = new Parser<>();
+        CargoAircraft cargoAirCraft = parser.parseVehicle(CargoAircraft.class, Constants.CARGO_PLANES_PATH).get(0);
         ParkingService parkingService = new ParkingService();
         parkingService.parkVehicle(cargoAirCraft);
         parkingService.unparkVehicle(cargoAirCraft, 5);

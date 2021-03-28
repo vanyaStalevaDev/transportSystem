@@ -2,7 +2,7 @@ package org.javaSchool;
 
 import org.javaSchool.db.Test;
 import org.javaSchool.model.Route;
-import org.javaSchool.model.airlineIndustry.CargoAirCraft;
+import org.javaSchool.model.airlineIndustry.CargoAircraft;
 import org.javaSchool.model.airlineIndustry.PassengerAircraft;
 import org.javaSchool.model.sailIndustry.CargoShip;
 import org.javaSchool.model.trainIndustry.CargoTrain;
@@ -12,7 +12,6 @@ import org.javaSchool.util.Constants;
 import org.javaSchool.util.Parser;
 
 import java.util.List;
-import java.util.TreeSet;
 
 public class Demo {
     public static void main(String[] args) {
@@ -80,8 +79,8 @@ public class Demo {
         passengerAircraft.endTravel();
 
         //Demonstrate a cargo plane
-        Parser<CargoAirCraft> parser1 = new Parser<>();
-        CargoAirCraft cargoAirCraft = parser1.parseVehicle(CargoAirCraft.class, Constants.CARGO_PLANES_PATH).get(0);
+        Parser<CargoAircraft> parser1 = new Parser<>();
+        CargoAircraft cargoAirCraft = parser1.parseVehicle(CargoAircraft.class, Constants.CARGO_PLANES_PATH).get(0);
         cargoAirCraft.load(1200);
         cargoAirCraft.setRoute(new Route(List.of("Sofia", "Eindhoven"), 3000f));
         cargoAirCraft.travel();

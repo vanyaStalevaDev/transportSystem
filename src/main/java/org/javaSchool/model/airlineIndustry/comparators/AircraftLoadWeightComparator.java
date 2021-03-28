@@ -1,12 +1,12 @@
 package org.javaSchool.model.airlineIndustry.comparators;
 
-import org.javaSchool.model.airlineIndustry.CargoAirCraft;
+import org.javaSchool.model.airlineIndustry.CargoAircraft;
 
 import java.util.Comparator;
 
-public class AircraftLoadWeightComparator implements Comparator<CargoAirCraft> {
+public class AircraftLoadWeightComparator implements Comparator<CargoAircraft> {
     @Override
-    public int compare(CargoAirCraft o1, CargoAirCraft o2) {
+    public int compare(CargoAircraft o1, CargoAircraft o2) {
         return o1.getLoadWeight() - o2.getLoadWeight();
     }
 }
