@@ -13,7 +13,6 @@ public abstract class Aircraft implements Vehicle {
     @CsvBindByName
     protected String plateNumber;
 
-
     @CsvBindByName
     protected AircraftEngineType engineType;
     @CsvBindByName

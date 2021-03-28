@@ -3,8 +3,6 @@ package org.javaSchool.service.parkingService;
 import org.javaSchool.model.Vehicle;
 import org.javaSchool.model.parking.Parking;
 import org.javaSchool.model.parking.ParkingReceipt;
-
-
 import java.time.Duration;
 import java.time.LocalDateTime;
 

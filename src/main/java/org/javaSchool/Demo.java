@@ -1,5 +1,6 @@
 package org.javaSchool;
 
+import org.javaSchool.db.Test;
 import org.javaSchool.model.Route;
 import org.javaSchool.model.airlineIndustry.CargoAirCraft;
 import org.javaSchool.model.airlineIndustry.PassengerAircraft;
@@ -15,15 +16,19 @@ import java.util.TreeSet;
 
 public class Demo {
     public static void main(String[] args) {
+
+        Test dbTest = new Test();
+//        dbTest.readDB();
+        dbTest.writeDB();
 //      Demo demo = new Demo();
-        SortingDemo demo = new SortingDemo();
-        demo.sortTrains();
+//        SortingDemo demo = new SortingDemo();
+//        demo.sortTrains();
 //        demo.addToMap();
 //      demo.demoShips();
 //      demo.demoAircrafts();
 //      demo.demoTrains();
 //      ParkingDemo parkingDemo = new ParkingDemo();
-//      parkingDemo.demoAircraftParking();
+//      parkingDemo.demoAircraftParking();git
 //      parkingDemo.demoShipParking();
 //      parkingDemo.demoTrainParking();
     }

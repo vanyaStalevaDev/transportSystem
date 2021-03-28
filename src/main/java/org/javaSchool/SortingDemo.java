@@ -1,5 +1,6 @@
 package org.javaSchool;
 
+import org.javaSchool.model.Vehicle;
 import org.javaSchool.model.trainIndustry.comparators.TrainPassengersNumComparator;
 import org.javaSchool.util.Constants;
 import org.javaSchool.util.Parser;
@@ -11,16 +12,17 @@ import java.util.*;
 public class SortingDemo {
 
     public void addToOrderedCollection() {
-        Parser parser = new Parser();
-        List<PassengerTrain> passengerTrains = parser.parseVehicle(PassengerTrain.class, Constants.PASSENGER_TRAINS_PATH);
+        Parser<PassengerTrain> parser = new Parser<>();
+        List<PassengerTrain> trains = parser.parseVehicle(PassengerTrain.class, Constants.PASSENGER_TRAINS_PATH);
         Set<PassengerTrain> set = new TreeSet<>();
-        for (PassengerTrain train : passengerTrains) {
+        for (PassengerTrain train : trains) {
             set.add(train);
         }
+        set.stream().forEach(System.out::println);
     }
 
     public void addToMap() {
-        Parser parser = new Parser();
+        Parser<PassengerTrain> parser = new Parser<>();
         List<PassengerTrain> passengerTrains = parser.parseVehicle(PassengerTrain.class, Constants.PASSENGER_TRAINS_PATH);
         Map<PassengerTrain, Integer> map = new HashMap<>();
         for (PassengerTrain train : passengerTrains) {
@@ -35,7 +37,7 @@ public class SortingDemo {
     }
 
     public void sortTrains() {
-        Parser parser = new Parser();
+        Parser<PassengerTrain> parser = new Parser<>();
         List<PassengerTrain> passengerTrains = parser.parseVehicle(PassengerTrain.class, Constants.PASSENGER_TRAINS_PATH);
         System.out.println("Print before sort!");
         passengerTrains.stream().forEach(System.out::println);
