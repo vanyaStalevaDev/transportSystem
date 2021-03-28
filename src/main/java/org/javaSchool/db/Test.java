@@ -40,7 +40,7 @@ public class Test {
 
         String query = "INSERT INTO `transport_system`.`cargo_train` (`plate_number`, `engine_type`) VALUES ('1012AA', 'DIESEL')";
 
-        try (Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/transport_system", "root", "boaz77")) {
+        try (Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/transport_system", "test", "test")) {
             try (Statement statement = con.createStatement()) {
                 int rows = statement.executeUpdate(query);
                 System.out.println();
