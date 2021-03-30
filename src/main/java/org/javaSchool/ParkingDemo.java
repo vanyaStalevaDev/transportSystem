@@ -9,7 +9,7 @@ import org.javaSchool.util.Parser;
 
 public class ParkingDemo {
 
-    public void demoTrainParking() {
+     public void demoTrainParking() {
         Parser<PassengerTrain> parser = new Parser<>();
         PassengerTrain passengerTrain = parser.parseVehicle(PassengerTrain.class, Constants.PASSENGER_TRAINS_PATH).get(1);
         ParkingService parkingService = new ParkingService();

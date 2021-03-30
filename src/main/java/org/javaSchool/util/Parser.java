@@ -1,6 +1,8 @@
 package org.javaSchool.util;
 
 import com.opencsv.bean.CsvToBeanBuilder;
+import com.opencsv.exceptions.CsvDataTypeMismatchException;
+
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.Collections;

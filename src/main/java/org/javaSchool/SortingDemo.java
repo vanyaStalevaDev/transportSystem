@@ -1,6 +1,5 @@
 package org.javaSchool;
 
-import org.javaSchool.model.Vehicle;
 import org.javaSchool.model.trainIndustry.comparators.TrainPassengersNumComparator;
 import org.javaSchool.util.Constants;
 import org.javaSchool.util.Parser;

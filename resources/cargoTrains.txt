@@ -1,2 +1,2 @@
 loadCapacity,loadWeight,plateNumber,engineType, vehicleType
-1000,200,AB1020A,DIESELS,TRAIN
+1000,200,AB120A,DIESEL,TRAIN

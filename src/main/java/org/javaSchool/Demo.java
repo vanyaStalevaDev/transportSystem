@@ -1,6 +1,5 @@
 package org.javaSchool;
 
-import org.javaSchool.db.Test;
 import org.javaSchool.model.Route;
 import org.javaSchool.model.airlineIndustry.CargoAircraft;
 import org.javaSchool.model.airlineIndustry.PassengerAircraft;
@@ -16,20 +15,19 @@ import java.util.List;
 public class Demo {
     public static void main(String[] args) {
 
-        Test dbTest = new Test();
-//        dbTest.readDB();
-        dbTest.writeDB();
-//      Demo demo = new Demo();
-//        SortingDemo demo = new SortingDemo();
-//        demo.sortTrains();
-//        demo.addToMap();
-//      demo.demoShips();
-//      demo.demoAircrafts();
-//      demo.demoTrains();
-//      ParkingDemo parkingDemo = new ParkingDemo();
-//      parkingDemo.demoAircraftParking();git
-//      parkingDemo.demoShipParking();
-//      parkingDemo.demoTrainParking();
+//        Demo demo = new Demo();
+//        demo.demoShips();
+//        demo.demoAircrafts();
+//        demo.demoTrains();
+
+        DBDemo demo = new DBDemo();
+        demo.saveCargoTrains();
+        demo.savePassengerTrains();
+        demo.saveCargoAircrafts();
+        demo.savePassengerAircrafts();
+        demo.savePassengerShips();
+        demo.saveCargoShips();
+
     }
 
     public void demoTrains() {
